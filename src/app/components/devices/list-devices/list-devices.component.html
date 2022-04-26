@@ -1,0 +1,11 @@
+<h1>Devices List</h1>
+
+<h3 *ngIf="devices.length===0">No found devices :'(</h3>
+
+<div *ngFor="let device of devices; index as i">
+    ID:{{i}}
+    Marca: {{device.marca}}
+    Modelo: {{device.modelo}}
+    Estado: {{device.estado}}
+    <button (click)="removeDevice(i)">Del</button>
+</div>
