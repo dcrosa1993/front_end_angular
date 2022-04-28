@@ -7,6 +7,8 @@ import { ListDevicesComponent } from './components/devices/list-devices/list-dev
 import { AddDevicesComponent } from './components/devices/add-devices/add-devices.component';
 import { EditDevicesComponent } from './components/devices/edit-devices/edit-devices.component';
 import { FormsModule } from '@angular/forms';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     AddDevicesComponent,
     EditDevicesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, GraphQLModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
